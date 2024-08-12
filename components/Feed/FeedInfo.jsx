@@ -1,8 +1,9 @@
+import moment from "moment";
 import { StyleSheet } from "react-native";
-import { Text, YStack } from "tamagui";
+import { Text } from "tamagui";
+import Container from "../Container";
 import FeedInteraction from "./FeedInteraction";
 import FeedTotalLike from "./FeedTotalLike";
-import moment from "moment";
 
 export default function FeedInfo({
   friendLikes,
@@ -12,7 +13,7 @@ export default function FeedInfo({
   postDate,
 }) {
   return (
-    <YStack paddingVertical={10} paddingHorizontal={6}>
+    <Container block="ystack" paddingVertical={10}>
       <FeedInteraction />
       <FeedTotalLike friendLikes={friendLikes} />
       <Text paddingBottom={5}>
@@ -20,7 +21,7 @@ export default function FeedInfo({
       </Text>
       <Text color={"gray"}>View all {totalComments} comments</Text>
       <Text color={"gray"}>{moment(new Date(postDate)).fromNow()}</Text>
-    </YStack>
+    </Container>
   );
 }
 

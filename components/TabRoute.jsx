@@ -1,8 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import { Image, XStack } from "tamagui";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { StyleSheet } from "react-native";
+import { Image, XStack } from "tamagui";
 
-export default function Footer() {
+export default function TabRoute() {
   return (
     <XStack
       backgroundColor={"#eee"}

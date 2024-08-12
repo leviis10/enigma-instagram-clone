@@ -3,11 +3,11 @@ import { createTamagui, TamaguiProvider } from "@tamagui/core";
 import { useFonts } from "expo-font";
 import { StyleSheet } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import Header from "./components/Header";
-import { ScrollView, View } from "tamagui";
-import StoryList from "./components/StoryList";
+import { ScrollView } from "tamagui";
 import Feeds from "./components/Feed/Feeds";
-import Footer from "./components/Footer";
+import Header from "./components/Header";
+import StoryList from "./components/Story/StoryList";
+import TabRoute from "./components/TabRoute";
 
 const tamaguiConfig = createTamagui(config);
 
@@ -24,14 +24,13 @@ export default function App() {
   return (
     <TamaguiProvider config={tamaguiConfig}>
       <SafeAreaProvider>
-        <SafeAreaView style={{ flexDirection: "column", flex: 1 }}>
+        <SafeAreaView style={styles.container}>
           <ScrollView showsVerticalScrollIndicator={false}>
             <Header />
             <StoryList />
             <Feeds />
           </ScrollView>
-
-          <Footer />
+          <TabRoute />
         </SafeAreaView>
       </SafeAreaProvider>
     </TamaguiProvider>
@@ -40,6 +39,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     flexDirection: "column",
   },
 });

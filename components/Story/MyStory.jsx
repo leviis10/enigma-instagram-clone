@@ -1,6 +1,6 @@
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { StyleSheet, Text } from "react-native";
 import { Image, XStack, YStack } from "tamagui";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 export default function MyStory() {
   return (

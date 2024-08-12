@@ -1,11 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
-import { XStack } from "tamagui";
+import { StyleSheet } from "react-native";
+import { XStack, YStack } from "tamagui";
 
 export default function Container(props) {
-  const { children, paddingVertical } = props;
+  const { children, block } = props;
+  const paddingHorizontal = 13;
+
+  if (block?.toLowerCase() === "ystack") {
+    return (
+      <YStack paddingHorizontal={paddingHorizontal} {...props}>
+        {children}
+      </YStack>
+    );
+  }
 
   return (
-    <XStack paddingHorizontal={6} {...props}>
+    <XStack paddingHorizontal={paddingHorizontal} {...props}>
       {children}
     </XStack>
   );

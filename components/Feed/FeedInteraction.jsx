@@ -1,7 +1,6 @@
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { StyleSheet } from "react-native";
 import { XStack } from "tamagui";
-import Container from "../Container";
 
 export default function FeedInteraction() {
   return (

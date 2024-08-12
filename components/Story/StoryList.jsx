@@ -1,9 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
-import { ScrollView, XStack } from "tamagui";
-import MyStory from "./MyStory";
+import { StyleSheet } from "react-native";
+import { ScrollView } from "tamagui";
+import Container from "../Container";
 import MyFriendStory from "./MyFriendStory";
-import Container from "./Container";
-import { FlatList } from "react-native";
+import MyStory from "./MyStory";
 
 const myFriendStories = [
   {

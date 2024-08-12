@@ -1,19 +1,21 @@
+import { Fragment } from "react";
 import { StyleSheet } from "react-native";
 import { YStack } from "tamagui";
-import { FEEDS_DATA } from "../../utils/FEED_DATA";
+import { FEEDS_DATA as feed } from "../../utils/FEED_DATA";
 import FeedHeader from "./FeedHeader";
 import FeedImage from "./FeedImage";
 import FeedInfo from "./FeedInfo";
-import { Fragment } from "react";
 
 export default function Feeds() {
-  const feed = FEEDS_DATA;
-
   return (
     <YStack>
       {feed.map((feed) => (
         <Fragment key={feed.id}>
-          <FeedHeader profileImage={feed.imageUrl} username={feed.username} />
+          <FeedHeader
+            profileImage={feed.imageUrl}
+            username={feed.username}
+            hasActiveStory={feed.hasActiveStory}
+          />
           <FeedImage imageSrc={feed.feed.imageUrl} />
           <FeedInfo
             friendLikes={feed.feed.friendLikes}

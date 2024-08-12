@@ -1,6 +1,6 @@
-import { StyleSheet, View } from "react-native";
-import { H1, SizableText, XStack, Text } from "tamagui";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { StyleSheet } from "react-native";
+import { Text, XStack } from "tamagui";
 import Container from "./Container";
 
 export default function Header() {

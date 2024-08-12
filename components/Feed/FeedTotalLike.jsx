@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
 import { Image, Text, XStack } from "tamagui";
-import Container from "../Container";
 
 export default function FeedTotalLike({ friendLikes }) {
   const size = 25;
